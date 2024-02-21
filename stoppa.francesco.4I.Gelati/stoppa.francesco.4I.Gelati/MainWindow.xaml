@@ -1,0 +1,45 @@
+﻿<Window x:Class="stoppa.francesco._4I.Gelati.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:stoppa.francesco._4I.Gelati"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Width="800">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Rectangle Fill="DarkGreen" Grid.Row="1"></Rectangle>
+            <DataGrid x:Name="dgIngredienti" Grid.Row="1"></DataGrid>
+
+
+
+            <Button Height="30" Width="100" Background="Gray" Margin="0,0,300,404">P1</Button>
+            <Button Height="30" Width="100" Background="Gray" Margin="100,0,200,404">P2</Button>
+            <Button Height="30" Width="100" Background="Gray" Margin="200,0,100,404">P3</Button>
+            <Button Height="30" Width="100" Background="Gray" Margin="300,0,0,404" VerticalAlignment="Bottom">P4</Button>
+            <DataGrid x:Name="dgGelati" 
+                Grid.Column="1"  
+                LoadingRow="dgGelati_LoadingRow"
+                      SelectionChanged="dgGelati_SelectionChanged"
+                      >
+            </DataGrid>
+            <TextBlock x:Name="StatusBar" Margin="0,415,0,0">Status bar</TextBlock>
+
+            <Rectangle Fill="LightGreen" Grid.Row="0" Grid.Column="1" Margin="0,0,0,217"></Rectangle>
+
+        </Grid>
+    </Grid>
+</Window>
